@@ -647,10 +647,65 @@ function createAnimalCharacter(options) {
 
   return character;
 }
- const clock = new THREE.Clock();
+
+/* =================================
+   BELLA BUNNY - CHARACTER MODEL
+================================= */
+
+const bella = createAnimalCharacter({
+  name: "Bella Bunny",
+  color: "#f4e4ce",
+  bellyColor: "#fff4e7"
+});
+
+// Give Bella long bunny ears
+const bunnyFur = new THREE.MeshStandardMaterial({
+  color: "#f4e4ce",
+  roughness: 0.85
+});
+
+const bunnyPink = new THREE.MeshStandardMaterial({
+  color: "#ed9cae",
+  roughness: 0.8
+});
+
+function bunnyPart(parent, material, position, scale) {
+  const part = new THREE.Mesh(
+    new THREE.SphereGeometry(1, 32, 24),
+    material
+  );
+
+  part.position.set(...position);
+  part.scale.set(...scale);
+  part.castShadow = true;
+  parent.add(part);
+
+  return part;
+}
+
+// Cover the factory's short ears with longer ears
+bunnyPart(bella, bunnyFur, [-0.58, 3.15, 0], [0.18, 0.58, 0.15]);
+bunnyPart(bella, bunnyFur, [0.58, 3.15, 0], [0.18, 0.58, 0.15]);
+
+// Pink inner ears
+bunnyPart(bella, bunnyPink, [-0.58, 3.16, 0.125], [0.09, 0.4, 0.045]);
+bunnyPart(bella, bunnyPink, [0.58, 3.16, 0.125], [0.09, 0.4, 0.045]);
+
+// Place Bella beside Benny
+bella.position.set(2.1, 0, 0);
+scene.add(bella);
+const clock = new THREE.Clock();
 
   function animate() {
-    requestAnimationFrame(animate);
+    // Bella's happy bunny dance
+bella.position.y = Math.abs(Math.sin(t * 4)) * 0.25;
+bella.rotation.y = Math.sin(t * 2) * 0.2;
+
+bella.userData.leftArm.rotation.z =
+  Math.sin(t * 5) * 0.5;
+
+bella.userData.rightArm.rotation.z =
+  -Math.sin(t * 5) * 0.5;requestAnimationFrame(animate);
 
     const t = clock.getElapsedTime();
 
