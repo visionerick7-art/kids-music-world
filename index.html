@@ -317,43 +317,7 @@
   </footer>
 
   <!-- TEMPORARY PLAYER INTERACTION -->
-  <script>
-    let songs = [
-      "Happy Little Bear",
-      "Rainbow Colours",
-      "Dancing Elephant",
-      "Count With Me",
-      "Funny Bunny",
-      "African Little Stars"
-    ];
-
-    let currentIndex = 0;
-
-    function selectSong(name) {
-      currentIndex = songs.indexOf(name);
-
-      document.getElementById("currentSong").textContent = name;
-      document.getElementById("playerStatus").textContent =
-        "Song selected! Audio will be connected in our next lesson.";
-    }
-
-    function toggleMusic() {
-      document.getElementById("playerStatus").textContent =
-        "Music player ready. Real audio coming in the next upgrade!";
-    }
-
-    function nextSong() {
-      currentIndex = (currentIndex + 1) % songs.length;
-      selectSong(songs[currentIndex]);
-    }
-
-    function previousSong() {
-      currentIndex =
-        (currentIndex - 1 + songs.length) % songs.length;
-
-      selectSong(songs[currentIndex]);
-    }
-  </script>
-
+ <script src="script.js"></script>
+  
 </body>
 </html>
