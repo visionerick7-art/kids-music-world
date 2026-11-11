@@ -190,7 +190,97 @@
         font-size: 65px;
       }
     }
-  </style>
+ 
+/* ANIMAL CHARACTER STAGE */
+
+.animal-stage {
+  position: absolute;
+  z-index: 5;
+  bottom: 80px;
+  left: 2%;
+  width: 96%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.animal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+}
+
+.animal-emoji {
+  display: inline-block;
+  font-size: clamp(35px, 7vw, 75px);
+  transform-origin: bottom center;
+}
+
+.animal-name {
+  background: #ffffff;
+  color: #244a35;
+  border-radius: 20px;
+  padding: 4px 9px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.bear .animal-emoji {
+  animation: bearDance 1.4s infinite ease-in-out;
+}
+
+.bunny .animal-emoji {
+  animation: bunnyJump 1s infinite ease-in-out;
+}
+
+.lion .animal-emoji {
+  animation: lionDance 1.2s infinite ease-in-out;
+}
+
+.elephant .animal-emoji {
+  animation: elephantDance 1.5s infinite ease-in-out;
+}
+
+.monkey .animal-emoji {
+  animation: monkeyDance 0.8s infinite ease-in-out;
+}
+
+.giraffe .animal-emoji {
+  animation: giraffeDance 1.3s infinite ease-in-out;
+}
+
+@keyframes bearDance {
+  0%, 100% { transform: rotate(-12deg) translateY(0); }
+  50% { transform: rotate(12deg) translateY(-18px); }
+}
+
+@keyframes bunnyJump {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-35px) rotate(8deg); }
+}
+
+@keyframes lionDance {
+  0%, 100% { transform: rotate(0); }
+  50% { transform: rotate(18deg) scale(1.15); }
+}
+
+@keyframes elephantDance {
+  0%, 100% { transform: rotate(-8deg); }
+  50% { transform: rotate(8deg) translateY(-12px); }
+}
+
+@keyframes monkeyDance {
+  0%, 100% { transform: rotate(-18deg) translateX(-5px); }
+  50% { transform: rotate(18deg) translateX(5px); }
+}
+
+@keyframes giraffeDance {
+  0%, 100% { transform: translateY(0) rotate(-7deg); }
+  50% { transform: translateY(-15px) rotate(7deg); }
+}
+ </style>
 </head>
 
 <body>
