@@ -509,7 +509,13 @@ const eyeShine = new THREE.MeshBasicMaterial({
   sphere(bear, black, [0, 2.17, 0.79], [0.13, 0.09, 0.07]);
 
   // Eyes
-  sphere(bear, white, [-0.29, 2.39, 0.58], [0.13, 0.16, 0.07]);
+// Eye highlights
+sphere(bear, eyeShine, [-0.29, 2.44, 0.68], [0.035, 0.045, 0.025]);
+sphere(bear, eyeShine, [0.29, 2.44, 0.68], [0.035, 0.045, 0.025]);
+
+// Rosy cheeks
+sphere(bear, pink, [-0.56, 2.12, 0.52], [0.13, 0.08, 0.035]);
+sphere(bear, pink, [0.56, 2.12, 0.52], [0.13, 0.08, 0.035]);  sphere(bear, white, [-0.29, 2.39, 0.58], [0.13, 0.16, 0.07]);
   sphere(bear, white, [0.29, 2.39, 0.58], [0.13, 0.16, 0.07]);
   sphere(bear, black, [-0.27, 2.39, 0.645], [0.065, 0.09, 0.035]);
   sphere(bear, black, [0.31, 2.39, 0.645], [0.065, 0.09, 0.035]);
