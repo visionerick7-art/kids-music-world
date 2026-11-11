@@ -175,15 +175,52 @@
   </section>
 
   <!-- MUSIC PLAYER -->
-  <section class="player" id="player">
-    <h2>🎧 Little Stars Music Player</h2>
+  
+<section class="player" id="player">
 
-    <div style="font-size:55px;">🎼</div>
+  <h2>🎧 Little Stars Music Player</h2>
 
-    <h3 id="currentSong">Choose Your Favourite Song!</h3>
+  <div style="font-size:55px;">🎼</div>
 
-    <p id="playerStatus">
-      Your music adventure starts here.
+  <h3 id="currentSong">Choose Your Favourite Song!</h3>
+
+  <p id="playerStatus">Ready to play!</p>
+
+  <div class="music-progress">
+    <input
+      type="range"
+      id="progressBar"
+      min="0"
+      max="100"
+      value="0"
+    >
+
+    <div class="time-display">
+      <span id="currentTime">0:00</span>
+      <span id="duration">0:00</span>
+    </div>
+  </div>
+
+  <div class="music-controls">
+    <button onclick="previousSong()">⏮ Previous</button>
+    <button id="playButton" onclick="toggleMusic()">▶ Play</button>
+    <button onclick="nextSong()">Next ⏭</button>
+  </div>
+
+  <div class="volume-control">
+    <label for="volumeControl">🔊 Volume</label>
+    <input
+      type="range"
+      id="volumeControl"
+      min="0"
+      max="1"
+      step="0.05"
+      value="0.8"
+    >
+  </div>
+
+</section>
+
     </p>
 
     <button onclick="previousSong()">⏮ Previous</button>
