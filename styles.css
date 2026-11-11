@@ -209,5 +209,135 @@ footer {
 
   .hero-art {
     font-size: 70px;
+
+/* ==================================
+   KIDS MUSIC WORLD CHARACTER ANIMATION
+================================== */
+
+#characters {
+  overflow: hidden;
+}
+
+#characters .category-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  animation: characterEntrance 0.8s ease both;
+}
+
+#characters .category-card:nth-child(even) {
+  animation-delay: 0.15s;
+}
+
+#characters .category-card .emoji {
+  display: inline-block;
+  animation: characterBounce 2s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+#characters .category-card:nth-child(2) .emoji {
+  animation-delay: 0.3s;
+}
+
+#characters .category-card:nth-child(3) .emoji {
+  animation-delay: 0.6s;
+}
+
+#characters .category-card:nth-child(4) .emoji {
+  animation-delay: 0.9s;
+}
+
+#characters .category-card:nth-child(5) .emoji {
+  animation-delay: 0.4s;
+}
+
+#characters .category-card:nth-child(6) .emoji {
+  animation-delay: 0.7s;
+}
+
+#characters .category-card:hover .emoji {
+  animation: characterDance 0.5s ease-in-out infinite;
+}
+
+@keyframes characterBounce {
+  0%, 100% {
+    transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(5deg);
+  }
+}
+
+@keyframes characterDance {
+  0%, 100% {
+    transform: rotate(-12deg) scale(1.1);
+  }
+
+  50% {
+    transform: rotate(12deg) scale(1.2);
+  }
+}
+
+@keyframes characterEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SONG COVER ANIMATION */
+
+.song-card .cover {
+  transition: transform 0.3s ease;
+}
+
+.song-card:hover .cover {
+  transform: scale(1.06);
+}
+
+/* MUSIC PLAYER DESIGN */
+
+.music-progress {
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.music-progress input {
+  width: 100%;
+  cursor: pointer;
+}
+
+.time-display {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.music-controls,
+.volume-control {
+  margin-top: 15px;
+}
+
+.music-controls button:hover {
+  transform: scale(1.07);
+}
+
+.volume-control input {
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #characters .category-card,
+  #characters .category-card .emoji {
+    animation: none;
+  }
+}
   }
 }
