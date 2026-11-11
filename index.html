@@ -5,16 +5,318 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#7c4dff">
-  <title>Kids Music World</title>
-<link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Discover fun children's songs, music, dancing, learning and adventures at Kids Music World.">
+  <title>Kids Music World | Sing, Dance, Learn</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-  <h1>🎵 KIDS MUSIC WORLD</h1>
-  <p>Sing, Dance, Learn and Play!</p>
+  <!-- NAVIGATION -->
+  <header>
+    <div class="logo">🎵 KIDS MUSIC WORLD</div>
 
-  <h2>Welcome Little Stars! 🌈</h2>
-  <p>Discover a magical world of children's songs.</p>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#songs">Songs</a>
+      <a href="#characters">Characters</a>
+      <a href="#videos">Videos</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div>
+      <h1>Welcome Little Stars! 🌈</h1>
+      <p>
+        A magical world of music, laughter, dancing,
+        learning and unforgettable adventures!
+      </p>
+      <a href="#songs" class="primary-btn">Explore Music 🎶</a>
+    </div>
+
+    <div class="hero-art">
+      🐻🎤🐰
+    </div>
+  </section>
+
+  <!-- MUSIC CATEGORIES -->
+  <section class="section" id="categories">
+    <h2>🎨 Explore Music Categories</h2>
+
+    <div class="category-grid">
+
+      <article class="category-card">
+        <div class="emoji">🎵</div>
+        <h3>Nursery Rhymes</h3>
+        <p>Classic children's songs</p>
+      </article>
+
+      <article class="category-card">
+        <div class="emoji">🔤</div>
+        <h3>ABC Songs</h3>
+        <p>Learn your alphabet</p>
+      </article>
+
+      <article class="category-card">
+        <div class="emoji">🔢</div>
+        <h3>Counting Songs</h3>
+        <p>Numbers made fun</p>
+      </article>
+
+      <article class="category-card">
+        <div class="emoji">🌈</div>
+        <h3>Colours</h3>
+        <p>Discover beautiful colours</p>
+      </article>
+
+      <article class="category-card">
+        <div class="emoji">🐘</div>
+        <h3>Animal Songs</h3>
+        <p>Meet amazing animals</p>
+      </article>
+
+      <article class="category-card">
+        <div class="emoji">💃</div>
+        <h3>Dance Music</h3>
+        <p>Move and have fun</p>
+      </article>
+
+      <article class="category-card">
+        <div class="emoji">🌍</div>
+        <h3>African Songs</h3>
+        <p>Discover African rhythms</p>
+      </article>
+
+      <article class="category-card">
+        <div class="emoji">🙏</div>
+        <h3>Christian Songs</h3>
+        <p>Faith and joyful music</p>
+      </article>
+
+      <article class="category-card">
+        <div class="emoji">🌙</div>
+        <h3>Bedtime Songs</h3>
+        <p>Sweet sleeping melodies</p>
+      </article>
+
+      <article class="category-card">
+        <div class="emoji">🧼</div>
+        <h3>Good Habits</h3>
+        <p>Learn healthy habits</p>
+      </article>
+
+      <article class="category-card">
+        <div class="emoji">🌳</div>
+        <h3>Nature Songs</h3>
+        <p>Love and protect nature</p>
+      </article>
+
+      <article class="category-card">
+        <div class="emoji">🎭</div>
+        <h3>Funny Songs</h3>
+        <p>Laugh and sing together</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- FEATURED SONGS -->
+  <section class="section" id="songs">
+    <h2>⭐ Featured Children's Songs</h2>
+
+    <div class="song-grid">
+
+      <article class="song-card">
+        <div class="cover">🐻🎸</div>
+        <h3>Happy Little Bear</h3>
+        <p>Animal Adventures</p>
+        <button class="primary-btn" onclick="selectSong('Happy Little Bear')">▶ Play</button>
+      </article>
+
+      <article class="song-card">
+        <div class="cover">🌈🎹</div>
+        <h3>Rainbow Colours</h3>
+        <p>Learning Music</p>
+        <button class="primary-btn" onclick="selectSong('Rainbow Colours')">▶ Play</button>
+      </article>
+
+      <article class="song-card">
+        <div class="cover">🐘🥁</div>
+        <h3>Dancing Elephant</h3>
+        <p>Animal Adventures</p>
+        <button class="primary-btn" onclick="selectSong('Dancing Elephant')">▶ Play</button>
+      </article>
+
+      <article class="song-card">
+        <div class="cover">🔢⭐</div>
+        <h3>Count With Me</h3>
+        <p>Numbers and Learning</p>
+        <button class="primary-btn" onclick="selectSong('Count With Me')">▶ Play</button>
+      </article>
+
+      <article class="song-card">
+        <div class="cover">🐰🎤</div>
+        <h3>Funny Bunny</h3>
+        <p>Funny Songs</p>
+        <button class="primary-btn" onclick="selectSong('Funny Bunny')">▶ Play</button>
+      </article>
+
+      <article class="song-card">
+        <div class="cover">🌍🥁</div>
+        <h3>African Little Stars</h3>
+        <p>African Music</p>
+        <button class="primary-btn" onclick="selectSong('African Little Stars')">▶ Play</button>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- MUSIC PLAYER -->
+  <section class="player" id="player">
+    <h2>🎧 Little Stars Music Player</h2>
+
+    <div style="font-size:55px;">🎼</div>
+
+    <h3 id="currentSong">Choose Your Favourite Song!</h3>
+
+    <p id="playerStatus">
+      Your music adventure starts here.
+    </p>
+
+    <button onclick="previousSong()">⏮ Previous</button>
+    <button onclick="toggleMusic()">▶ Play / Pause</button>
+    <button onclick="nextSong()">Next ⏭</button>
+  </section>
+
+  <!-- CARTOON CHARACTERS -->
+  <section class="section" id="characters">
+    <h2>🐾 Meet Our Musical Friends</h2>
+
+    <div class="category-grid">
+
+      <article class="category-card">
+        <div class="emoji">🐻</div>
+        <h3>Benny Bear</h3>
+        <p>The happy little singer</p>
+      </article>
+
+      <article class="category-card">
+        <div class="emoji">🐰</div>
+        <h3>Bunny Bella</h3>
+        <p>The dancing superstar</p>
+      </article>
+
+      <article class="category-card">
+        <div class="emoji">🦁</div>
+        <h3>Leo Lion</h3>
+        <p>The musical explorer</p>
+      </article>
+
+      <article class="category-card">
+        <div class="emoji">🐘</div>
+        <h3>Ellie Elephant</h3>
+        <p>The playful drummer</p>
+      </article>
+
+      <article class="category-card">
+        <div class="emoji">🐵</div>
+        <h3>Monkey Max</h3>
+        <p>The funny dancer</p>
+      </article>
+
+      <article class="category-card">
+        <div class="emoji">🦒</div>
+        <h3>Gigi Giraffe</h3>
+        <p>The curious friend</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- VIDEO SECTION -->
+  <section class="section" id="videos">
+    <h2>📺 Our Music Videos</h2>
+
+    <div class="category-card">
+      <div class="emoji">🎬🎶</div>
+      <h3>Watch, Sing and Dance!</h3>
+      <p>
+        Our original animated children's music videos
+        will appear here.
+      </p>
+      <p>Coming soon!</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <h2>💖 About Kids Music World</h2>
+
+    <p>
+      Kids Music World is a children's entertainment
+      platform designed to bring music, creativity,
+      happiness, learning and positive values to
+      children through original songs and animations.
+    </p>
+
+    <p>
+      Our mission is to make learning enjoyable
+      through music, imagination and discovery.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <h2>🎵 KIDS MUSIC WORLD</h2>
+
+    <p>Sing • Dance • Learn • Play</p>
+
+    <p>© 2026 Kids Music World. All rights reserved.</p>
+
+    <p>Made with ❤️ for little stars everywhere.</p>
+  </footer>
+
+  <!-- TEMPORARY PLAYER INTERACTION -->
+  <script>
+    let songs = [
+      "Happy Little Bear",
+      "Rainbow Colours",
+      "Dancing Elephant",
+      "Count With Me",
+      "Funny Bunny",
+      "African Little Stars"
+    ];
+
+    let currentIndex = 0;
+
+    function selectSong(name) {
+      currentIndex = songs.indexOf(name);
+
+      document.getElementById("currentSong").textContent = name;
+      document.getElementById("playerStatus").textContent =
+        "Song selected! Audio will be connected in our next lesson.";
+    }
+
+    function toggleMusic() {
+      document.getElementById("playerStatus").textContent =
+        "Music player ready. Real audio coming in the next upgrade!";
+    }
+
+    function nextSong() {
+      currentIndex = (currentIndex + 1) % songs.length;
+      selectSong(songs[currentIndex]);
+    }
+
+    function previousSong() {
+      currentIndex =
+        (currentIndex - 1 + songs.length) % songs.length;
+
+      selectSong(songs[currentIndex]);
+    }
+  </script>
 
 </body>
 </html>
