@@ -464,7 +464,15 @@ if (typeof THREE === "undefined") {
   // Benny's materials
   const brown = new THREE.MeshStandardMaterial({ color: "#9b572d", roughness: 0.85 });
   const lightBrown = new THREE.MeshStandardMaterial({ color: "#d69a65", roughness: 0.8 });
-  const black = new THREE.MeshStandardMaterial({ color: "#211713" });
+ // Benny's new facial materials
+const pink = new THREE.MeshStandardMaterial({
+  color: "#f28b91",
+  roughness: 0.7
+});
+
+const eyeShine = new THREE.MeshBasicMaterial({
+  color: "#ffffff"
+}); const black = new THREE.MeshStandardMaterial({ color: "#211713" });
   const white = new THREE.MeshStandardMaterial({ color: "#ffffff" });
 
   const bear = new THREE.Group();
